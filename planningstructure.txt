@@ -1,0 +1,75 @@
+gazetteer - a geographical index or dictionary.
+
+https://gazetteer.org.uk/ - example
+
+A gazetteer is a geographical dictionary[1][2][3] or directory used in conjunction with a map or atlas.[4][5] 
+It typically contains information concerning the geographical makeup, social statistics and physical features of a country,
+ region, or continent. Content of a gazetteer can include a subject's location, dimensions of peaks and waterways, population,
+ gross domestic product and literacy rate. This information is generally divided into topics with entries listed in alphabetical order.
+
+Specifications:
+This application is envisaged as a “mobile first“ website that will operate equally well
+on desktop computers.
+
+-Using a framework like Bootstrap will ease the task of design and a good approach would
+be to have a standard nav bar with a select tag for the countries and the map taking up all
+of the rest of available space on screen.
+
+
+On loading, the system should be able to determine the current location of the device and
+display a map highlighting the country that the user is currently in. This may be achieved
+using the JavaScript navigator command.
+
+The latitude and longitude data returned by this can then be used by AJAX functions to
+make calls to PHP routines that you design to call the above APIs. The data that they
+return for a country can then be arranged and displayed in the modal dialogs.
+
+the system should know how to read the data to find the country user is currently at 
+
+● Country name / Capital city
+● Population
+● Currency / current exchange rate
+● Current weather / weather forecast
+● Wikipedia links
+The above are an absolute minimum so please try to identify other APIs to retrieve
+interesting facts and geodata to overlay on the map to make your application as engaging
+as possible.
+
+
+Structure:
+
+- use different APIs that bring different info about the same country 
+
+- user can click on the country to obtain data or it can type the name of the country in a search bar 
+
+-map, search bar and menu will be on the main page along with the title, explanation what the page is for
+
+-country.borders.json file needs to be implemented 
+
+main page structure:
+-nav
+-display data
+-map
+
+
+The country can be accessed from:
+	-dropdown menu
+	-clicking on the place on the map or clicking within the coordinates of the country
+
+we use ajax to display data immediately from database or server. we do not need to refresh the wholw website to display data.
+
+
+have the borders of each country, so when you select a town, the computer recognises country and gives all info. 
+
+use click event when user clicks on the map (found in interaction events on leaflet site)
+
+implement countrybordersjosn file so the system reads long and latitude of your current location, and gives the name of the country and borders.
+
+API is request that we send dow to server for the data we want to obtain
+the analogy would be  client/customer -waiter -kitchen
+REST is representational state transfer . It relies on client server protocol which is http, rest can be used by ay programming lan.
+
+HTTP methods: post, get, delete
+get retrieves data from specified source
+post is to submit data to be processed to a specified resource
+
